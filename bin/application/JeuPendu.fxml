@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="262.0" prefWidth="374.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controlleur">
+   <bottom>
+      <VBox prefHeight="78.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="tentative" text="Le nombre de tentatives est:">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="15.0" right="5.0" top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <TextFlow prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Text fx:id="motDejaPropose" fill="#f21a1a" strokeType="OUTSIDE" strokeWidth="0.0" text="Les lettres tirées sont:">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TextFlow>
+            <HBox prefHeight="65.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="lettreProposee" alignment="CENTER">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="25.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="proposition" alignment="CENTER" mnemonicParsing="false" onAction="#actionValiderLettre" text="&gt;" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="30.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="motCacher" alignment="CENTER">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="40.0" right="20.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <ImageView fx:id="pendu" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@images/pendu_0.jpg" />
+         </image></ImageView>
+   </center>
+</BorderPane>
